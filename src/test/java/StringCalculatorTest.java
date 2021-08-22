@@ -28,8 +28,13 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void givenStringContainingFrom1To3_withNewLineSeparator_whenAdd_thenReturn6() {
+    public void givenStringContainingFrom1To3AndNewLineDelimiter_whenAdd_thenReturn6() {
         assertEquals(stringCalculator.add("1\n2,3"), 6);
+    }
+
+    @Test
+    public void givenStringContainingFrom1And2_withSemicolonDelimiter_whenAdd_thenReturn3() {
+        assertEquals(stringCalculator.add("//;\n1;2"), 3);
     }
 
 
