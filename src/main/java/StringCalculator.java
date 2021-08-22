@@ -14,7 +14,6 @@ public class StringCalculator {
     private int[] toIntArray(String numbers) {
         return Arrays.stream(numbers.split(NUMBERS_SEPARATOR))
                 .mapToInt(Integer::valueOf)
-                .limit(2)
                 .toArray();
     }
 
