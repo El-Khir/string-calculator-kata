@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class StringCalculator {
 
-    public static final String NUMBERS_SEPARATOR = ",";
+    public static final String NUMBERS_SEPARATOR_REGEX = "[,\n]";
 
     public int add(String numbers) {
         if (numbers.isEmpty()) {
@@ -12,7 +12,7 @@ public class StringCalculator {
     }
 
     private int[] toIntArray(String numbers) {
-        return Arrays.stream(numbers.split(NUMBERS_SEPARATOR))
+        return Arrays.stream(numbers.split(NUMBERS_SEPARATOR_REGEX))
                 .mapToInt(Integer::valueOf)
                 .toArray();
     }
